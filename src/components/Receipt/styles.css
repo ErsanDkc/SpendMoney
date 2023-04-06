@@ -1,0 +1,8 @@
+.receipt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+    font-size: 52px;
+    font-weight: 600;
+}
