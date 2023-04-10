@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { data } from "../../Data/data"
+import React from 'react'
+import { data } from "../../Data/Data"
 import "./styles.css"
 import Card from '../Card/Card'
 
