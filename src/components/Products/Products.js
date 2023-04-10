@@ -1,31 +1,20 @@
 import React, { useState } from 'react'
-import {data} from "../../Data/data"
-import { useSelector,useDispatch } from 'react-redux';
+import { data } from "../../Data/data"
 import "./styles.css"
-import { incereasePiece } from '../../redux/Money/moneySlice';
+import Card from '../Card/Card'
+
 function Products() {
-  const dispatch = useDispatch()
   
+
   return (
     <section>
       {
-        data.map((item) => 
-        <div key={item.id} className='card'>
-          <div className="image">
-            <img src={item.img} alt={item.title} />
-          </div>
-          <div className="title">{item.title}</div>
-          <div className="price">{item.price}</div>
-          <div className="cardControl">
-            <button className='red'>Sell</button>
-            <input type="number" value={piece}  />
-            <button className='green' >Buy</button>
-          </div>
-
-        </div>)
+        data.map((item) =>
+          <Card key={item.id} item={item}  />
+        )
       }
     </section>
-  ) 
+  )
 }
 
 export default Products
